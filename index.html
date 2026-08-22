@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SIRKEL TEXAS | SAMP COMMUNITY</title>
+
+<!-- FONT GAMING -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+    --blue:#008cff;
+    --blue2:#00c8ff;
+
+    --dark:#03060b;
+
+    --card:#0a111a;
+
+    --border:#182a3b;
+
+    --text:#ffffff;
+
+    --muted:#8290a0;
+
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+
+    font-family:'Rajdhani',sans-serif;
+
+    background:#03060b;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/* BACKGROUND */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 15%,
+        rgba(0,140,255,.20),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 90% 75%,
+        rgba(0,200,255,.12),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        180deg,
+        #03060b,
+        #050a11
+    );
+
+}
+
+
+/* GRID BACKGROUND */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.015) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.015) 1px,
+        transparent 1px
+    );
+
+    background-size:50px 50px;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(3,6,11,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,140,255,.25);
+
+    z-index:999;
+
+}
+
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.logo{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+    border-radius:10px;
+
+    border:1px solid var(--blue);
+
+    background:#08101a;
+
+    box-shadow:
+
+    0 0 20px rgba(0,140,255,.3);
+
+}
+
+
+.logo-text{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+}
+
+
+.logo-text span{
+
+    color:var(--blue);
+
+}
+
+
+nav ul{
+
+    display:flex;
+
+    gap:24px;
+
+    list-style:none;
+
+}
+
+
+nav ul a{
+
+    color:#aab5c4;
+
+    text-decoration:none;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+
+nav ul a:hover{
+
+    color:var(--blue2);
+
+    text-shadow:
+
+    0 0 12px rgba(0,200,255,.7);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 70px;
+
+}
+
+
+.hero-content{
+
+    max-width:950px;
+
+}
+
+
+.hero-logo{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:contain;
+
+    margin-bottom:25px;
+
+    filter:
+
+    drop-shadow(
+        0 0 25px rgba(0,140,255,.4)
+    );
+
+}
+
+
+.badge{
+
+    display:inline-block;
+
+    padding:9px 20px;
+
+    border:1px solid var(--blue);
+
+    border-radius:50px;
+
+    color:#5bcaff;
+
+    background:rgba(0,140,255,.08);
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero h1{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:clamp(45px,9vw,105px);
+
+    line-height:.9;
+
+    font-weight:900;
+
+    letter-spacing:-5px;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--blue);
+
+    text-shadow:
+
+    0 0 15px rgba(0,140,255,.7),
+
+    0 0 50px rgba(0,140,255,.25);
+
+}
+
+
+.hero p{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    color:#929eac;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 27px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+.discord{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #007cff,
+        #00aaff
+    );
+
+    color:white;
+
+    box-shadow:
+
+    0 0 25px rgba(0,140,255,.3);
+
+}
+
+
+.tiktok{
+
+    background:#0c121a;
+
+    color:white;
+
+    border:1px solid #263544;
+
+}
+
+
+.tiktok:hover{
+
+    border-color:var(--blue);
+
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+section{
+
+    padding:100px 7%;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+
+.section-title small{
+
+    color:var(--blue2);
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    font-weight:800;
+
+}
+
+
+.section-title h2{
+
+    margin-top:12px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:clamp(28px,5vw,45px);
+
+    font-weight:800;
+
+}
+
+
+.section-title p{
+
+    margin-top:12px;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    padding:45px;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #0c131d,
+        #070b11
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+.about::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        var(--blue),
+        var(--blue2)
+    );
+
+}
+
+
+.about h3{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:27px;
+
+    margin-bottom:20px;
+
+}
+
+
+.about h3 span{
+
+    color:var(--blue);
+
+}
+
+
+.about p{
+
+    color:#9aa6b5;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+
+.highlight{
+
+    color:#20b3ff;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(
+        auto-fit,
+        minmax(220px,1fr)
+    );
+
+    gap:20px;
+
+}
+
+
+.card{
+
+    position:relative;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #0c131d,
+        #070b11
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        var(--blue),
+        var(--blue2),
+        transparent
+    );
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--blue);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,120,255,.14);
+
+}
+
+
+/* FOTO MEMBER */
+
+.member-photo{
+
+    width:105px;
+
+    height:105px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid var(--blue);
+
+    background:#0a111a;
+
+    box-shadow:
+
+    0 0 25px rgba(0,140,255,.25);
+
+}
+
+
+.card h3{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:16px;
+
+    margin-bottom:9px;
+
+    letter-spacing:1px;
+
+}
+
+
+.role{
+
+    color:var(--blue2);
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+.card p{
+
+    margin-top:12px;
+
+    color:#707d8c;
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   RULES
+===================================================== */
+
+.rules{
+
+    max-width:850px;
+
+    margin:auto;
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+
+.rule{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:17px 20px;
+
+    background:#090f17;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+
+.rule:hover{
+
+    border-color:var(--blue);
+
+    transform:translateX(6px);
+
+}
+
+
+.rule-number{
+
+    width:38px;
+
+    height:38px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #007cff,
+        #00aaff
+    );
+
+    border-radius:8px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:9px;
+
+    font-weight:900;
+
+}
+
+
+.rule strong{
+
+    font-size:16px;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(0,140,255,.15),
+        transparent 60%
+    ),
+
+    #080e16;
+
+    border:1px solid #1b527d;
+
+    border-radius:25px;
+
+}
+
+
+.cta h2{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:clamp(27px,5vw,42px);
+
+    margin-bottom:15px;
+
+}
+
+
+.cta p{
+
+    color:#8994a2;
+
+    margin-bottom:28px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    color:#5e6a79;
+
+    border-top:1px solid #141f2b;
+
+    font-size:13px;
+
+}
+
+
+footer strong{
+
+    color:var(--blue);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    nav{
+
+        padding:0 18px;
+
+    }
+
+
+    nav ul{
+
+        display:none;
+
+    }
+
+
+    .logo-text{
+
+        font-size:15px;
+
+    }
+
+
+    .hero-logo{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+
+    .hero h1{
+
+        letter-spacing:-3px;
+
+    }
+
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+
+    section{
+
+        padding:75px 20px;
+
+    }
+
+
+    .about{
+
+        padding:30px 25px;
+
+    }
+
+
+    .about h3{
+
+        font-size:23px;
+
+    }
+
+
+    .about p{
+
+        font-size:14px;
+
+    }
+
+
+    .member-photo{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav>
+
+<div class="logo-area">
+
+<img
+src="txs-logo.png"
+class="logo"
+alt="TXS Logo">
+
+<div class="logo-text">
+
+SIRKEL <span>TEXAS</span>
+
+</div>
+
+</div>
+
+
+<ul>
+
+<li>
+<a href="#home">HOME</a>
+</li>
+
+<li>
+<a href="#about">TENTANG</a>
+</li>
+
+<li>
+<a href="#struktur">STRUKTUR</a>
+</li>
+
+<li>
+<a href="#pillars">PILLARS</a>
+</li>
+
+<li>
+<a href="#roaster">ROASTER</a>
+</li>
+
+<li>
+<a href="#syarat">SYARAT</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+class="hero"
+id="home">
+
+<div class="hero-content">
+
+
+<img
+src="txs-logo.png"
+class="hero-logo"
+alt="SIRKEL TEXAS">
+
+
+<div class="badge">
+
+SAMP COMMUNITY • TEXAS
+
+</div>
+
+
+<h1>
+
+SIRKEL <span>TEXAS</span>
+
+</h1>
+
+
+<p>
+
+SIRKEL TEXAS adalah sebuah kelompok
+yang bergerak dalam permainan Roleplay,
+TCW, dan juga berkunjung di server fresh
+untuk menjadi Badside maupun Goodside.
+
+</p>
+
+
+<div class="buttons">
+
+
+<a
+href="https://discord.gg/ZgUwwTWrP"
+target="_blank"
+class="btn discord">
+
+JOIN DISCORD
+
+</a>
+
+
+<a
+href="https://www.tiktok.com/@sirkeltexas"
+target="_blank"
+class="btn tiktok">
+
+TIKTOK
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+
+<div class="section-title">
+
+<small>
+ABOUT TEXAS
+</small>
+
+
+<h2>
+TENTANG SIRKEL TEXAS
+</h2>
+
+
+<p>
+Kenali lebih dekat komunitas SIRKEL TEXAS.
+</p>
+
+</div>
+
+
+<div class="about">
+
+
+<h3>
+
+# SIRKEL <span>TEXAS</span>
+
+</h3>
+
+
+<p>
+
+<strong>SIRKEL TEXAS</strong>
+adalah sebuah kelompok bergerak permainan,
+<strong>Roleplay, TCW</strong>, dan juga berkunjung
+di server fresh untuk menjadi
+<span class="highlight">
+Badside maupun Goodside.
+</span>
+
+</p>
+
+
+<br>
+
+
+<p>
+
+<span class="highlight">
+TEXAS OPEN RECRUITMENT — ALL DEVICE
+</span>
+
+</p>
+
+
+<br>
+
+
+<p>
+
+Yang penting
+<strong>rajin maskot</strong>
+dan
+<strong>aktif voice.</strong>
+
+</p>
+
+
+<br>
+
+
+<p>
+
+<span class="highlight">
+( ANTI NUMPANG ROLE )
+</span>
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STRUKTUR
+===================================================== -->
+
+<section id="struktur">
+
+
+<div class="section-title">
+
+<small>
+MANAGEMENT
+</small>
+
+
+<h2>
+STRUKTUR TEXAS
+</h2>
+
+
+<p>
+Management SIRKEL TEXAS.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- OWNER NANO -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="NANO">
+
+<h3>
+NANO
+</h3>
+
+<div class="role">
+OWNER
+</div>
+
+<p>
+Owner SIRKEL TEXAS
+</p>
+
+</div>
+
+
+<!-- OWNER AKBAR -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="AKBAR">
+
+<h3>
+AKBAR
+</h3>
+
+<div class="role">
+OWNER
+</div>
+
+<p>
+Owner SIRKEL TEXAS
+</p>
+
+</div>
+
+
+<!-- WAKIL -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="LUCKY">
+
+<h3>
+LUCKY
+</h3>
+
+<div class="role">
+WAKIL
+</div>
+
+<p>
+Wakil SIRKEL TEXAS
+</p>
+
+</div>
+
+
+<!-- STAFF MEMET -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="MEMET">
+
+<h3>
+MEMET
+</h3>
+
+<div class="role">
+STAFF
+</div>
+
+<p>
+Staff SIRKEL TEXAS
+</p>
+
+</div>
+
+
+<!-- STAFF LUCKY -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="LUCKY">
+
+<h3>
+LUCKY
+</h3>
+
+<div class="role">
+STAFF
+</div>
+
+<p>
+Staff SIRKEL TEXAS
+</p>
+
+</div>
+
+
+<!-- STAFF TATANG -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="TATANG">
+
+<h3>
+TATANG
+</h3>
+
+<div class="role">
+STAFF
+</div>
+
+<p>
+Staff SIRKEL TEXAS
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PILLARS
+===================================================== -->
+
+<section id="pillars">
+
+
+<div class="section-title">
+
+<small>
+CORE TEAM
+</small>
+
+
+<h2>
+PILLARS
+</h2>
+
+
+<p>
+Pilar utama SIRKEL TEXAS.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+
+<img
+src="member.png"
+class="member-photo"
+alt="TATANG">
+
+
+<h3>
+TATANG
+</h3>
+
+
+<div class="role">
+PILLARS
+</div>
+
+
+<p>
+Pillars SIRKEL TEXAS
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ROASTER
+===================================================== -->
+
+<section id="roaster">
+
+
+<div class="section-title">
+
+<small>
+BATTLE TEAM
+</small>
+
+
+<h2>
+ROASTER LAGA
+</h2>
+
+
+<p>
+Line-up roaster laga SIRKEL TEXAS.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- FANDY -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="FANDY">
+
+<h3>
+FANDY
+</h3>
+
+<div class="role">
+ROASTER LAGA
+</div>
+
+</div>
+
+
+<!-- AKBAR -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="AKBAR">
+
+<h3>
+AKBAR
+</h3>
+
+<div class="role">
+ROASTER LAGA
+</div>
+
+</div>
+
+
+<!-- EVAN -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="EVAN">
+
+<h3>
+EVAN
+</h3>
+
+<div class="role">
+ROASTER LAGA
+</div>
+
+</div>
+
+
+<!-- PALMER -->
+
+<div class="card">
+
+<img
+src="member.png"
+class="member-photo"
+alt="PALMER">
+
+<h3>
+PALMER
+</h3>
+
+<div class="role">
+ROASTER LAGA
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SYARAT JOIN
+===================================================== -->
+
+<section id="syarat">
+
+
+<div class="section-title">
+
+<small>
+RECRUITMENT
+</small>
+
+
+<h2>
+SYARAT MASUK TEXAS
+</h2>
+
+
+<p>
+Persyaratan untuk bergabung dengan SIRKEL TEXAS.
+</p>
+
+</div>
+
+
+<div class="rules">
+
+
+<!-- 01 -->
+
+<div class="rule">
+
+<div class="rule-number">
+01
+</div>
+
+<strong>
+Rajin Maskot
+</strong>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="rule">
+
+<div class="rule-number">
+02
+</div>
+
+<strong>
+Rajin Sholat
+</strong>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="rule">
+
+<div class="rule-number">
+03
+</div>
+
+<strong>
+Rajin Ngaji
+</strong>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="rule">
+
+<div class="rule-number">
+04
+</div>
+
+<strong>
+Sering-sering Voice
+</strong>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="rule">
+
+<div class="rule-number">
+05
+</div>
+
+<strong>
+Anti Numpang Role
+</strong>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="rule">
+
+<div class="rule-number">
+06
+</div>
+
+<strong>
+NO DB / CC
+</strong>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JOIN TEXAS
+===================================================== -->
+
+<section>
+
+
+<div class="cta">
+
+
+<h2>
+JOIN THE TEXAS
+</h2>
+
+
+<p>
+Siap menjadi bagian dari SIRKEL TEXAS?
+Gabung Discord kami sekarang.
+</p>
+
+
+<div class="buttons">
+
+
+<a
+href="https://discord.gg/ZgUwwTWrP"
+target="_blank"
+class="btn discord">
+
+JOIN DISCORD
+
+</a>
+
+
+<a
+href="https://www.tiktok.com/@sirkeltexas"
+target="_blank"
+class="btn tiktok">
+
+FOLLOW TIKTOK
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+© 2026
+
+<strong>
+SIRKEL TEXAS
+</strong>
+
+— SAMP COMMUNITY
+
+</footer>
+
+
+</body>
+
+</html>
